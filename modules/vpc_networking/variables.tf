@@ -23,7 +23,7 @@ variable "private_subnets_rds_cidr" {
 variable "public_subnets_cidr" {
   type        = list(any)
   description = "CIDR block for Public Subnet"
-  default     = ["10.0.5.0/24"]
+  default     = ["10.0.5.0/24","10.0.6.0/24"]
 }
 
 variable "cluster-name" {
