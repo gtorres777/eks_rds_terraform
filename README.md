@@ -31,7 +31,7 @@ This project follows the following file structure:
 ├── policies: all policies created for the project
 │   ├── assume_eks_cluster_role_policy.json
 │   └── assume_eks_worker_nodes_role_policy.json
-├── backend.tf: s3 backend configured to store terraform state files and dynamodb configured to lock state
+├── backend.tf: s3 backend configured to store terraform state files and DynamoDB configured to lock state
 ├── main.tf: main set of configuration for all the modules used
 ├── providers.tf: providers configured for the terraform project
 ├── variables.tf: variables defined that will be used inside terraform templates
@@ -40,6 +40,11 @@ This project follows the following file structure:
 ```
 
 ## Usage
+
+Configure the S3 bucket and DynamoDB table as in the ```backend.tf``` file or change it as the name you choose for your S3 bucket and DynamoDB table resources
+
+Then execute the following commands:
+
 Run ```terraform init``` to initialize the working directory containing Terraform configuration files.
 
 Run ```terraform apply``` to deploy the application.
