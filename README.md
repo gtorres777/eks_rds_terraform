@@ -31,7 +31,7 @@ This project follows the following file structure:
 ├── policies: all policies created for the project
 │   ├── assume_eks_cluster_role_policy.json
 │   └── assume_eks_worker_nodes_role_policy.json
-├── backend.tf: s3 backend configured to store terraform state files and dynamodb configuration to lock
+├── backend.tf: s3 backend configured to store terraform state files and dynamodb configured to lock state
 ├── main.tf: main set of configuration for all the modules used
 ├── providers.tf: providers configured for the terraform project
 ├── variables.tf: variables defined that will be used inside terraform templates
@@ -42,12 +42,12 @@ This project follows the following file structure:
 ## Usage
 Run ```terraform init``` to initialize the working directory containing Terraform configuration files.
 
-Run ```terraform apply``` to deploy the serverless application.
+Run ```terraform apply``` to deploy the application.
 
 
 ## Connect to the deployed EKS Cluster
 
-Execute the following command by providing the cluster name chose, if used the default variables it will be eks_cluster like below
+Execute the following command by providing the cluster name chose, if used the default variables it will be ```eks_cluster``` like below
 
 Run ```aws eks update-kubeconfig --name eks_cluster --region us-east-1``` to update your kubeconfig to be able to connect to the EKS cluster.
 
