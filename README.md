@@ -1,4 +1,4 @@
-# Final Project EKS RDS Terraform
+# EKS RDS Terraform
 
 ## Description
 ![Alt text](/final_project_diagram.png?raw=true "Final Project Diagram")
